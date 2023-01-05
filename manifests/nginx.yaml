@@ -12,18 +12,18 @@ spec:
     metadata:
       labels:
         app: nginx
-      spec:
-        containers:
-          - name: nginx
-            image: nginx:stable
-            imagePullPolicy: Always
-            ports:
-            - containerPort: 80
-              name: web
-              protocol: TCP
-            readinessProbe:
-              httpGet:
-                port: web
-                path: /
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:stable
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+            name: web
+            protocol: TCP
+          readinessProbe:
+            httpGet:
+              port: web
+              path: /
                 
   
