@@ -27,7 +27,7 @@ spec:
           ports:
             - containerPort: 8080
           volumeMounts:
-            - mountPath: /config
+            - mountPath: /mnt/docker
               name: nfs-homer-thebusbees  
       dnsConfig:
         nameservers:
