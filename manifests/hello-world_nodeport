@@ -1,0 +1,15 @@
+#nodeport
+apiVersion: v1
+kind: Service
+metadata:
+    name: nodeport
+    namespace: default
+spec:
+    type: nodeport 
+    selector:
+        app: hello-world
+    ports:
+        - name: web
+          port: 8080
+          targetPort: web
+          nodePort: 30000
